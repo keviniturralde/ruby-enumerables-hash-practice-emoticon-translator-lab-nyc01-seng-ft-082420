@@ -1,6 +1,8 @@
 # require modules here
-
+require "yaml"
 def load_library
+  emoticons = YALM.load_file (file_path)
+  new_hash = {}
   # code goes here
 end
 
