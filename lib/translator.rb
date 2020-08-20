@@ -12,7 +12,12 @@ end
 new_hash
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(file_path, emoticons)
+  library = load_library(file_path)
+  emoticon = library.keys.find do |key|
+    library[key][:english] == emoticon
+  end
+  emoticon ? library[emoticon][:japanese] : "sorry, that emoticon was not found"
   # code goes here
 end
 
